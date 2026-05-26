@@ -161,14 +161,7 @@ Mark complaints as resolved.
 
 # Screenshots
 
-You can add screenshots here later.
-
-Example:
-
-```md
-![Home Page](screenshots/home.png)
-```
-
+screenshots are attached above 
 ---
 
 # Author
