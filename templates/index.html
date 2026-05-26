@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DormPulse</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>DormPulse</h1>
+            <p>Smart Hostel Complaint Management System</p>
+        </div>
+
+        <div class="main-grid">
+
+            <!-- Register Complaint -->
+            <div class="glass-card">
+                <h2>Register Complaint</h2>
+
+                <input type="text" id="name" placeholder="Student Name">
+
+                <input type="text" id="room" placeholder="Room Number">
+
+                <textarea id="issue" placeholder="Describe your issue..."></textarea>
+
+                <button class="primary-btn" onclick="registerComplaint()">
+                    Register Complaint
+                </button>
+            </div>
+
+            <!-- Actions -->
+            <div class="glass-card">
+                <h2>Complaint Actions</h2>
+
+                <button class="secondary-btn" onclick="loadComplaints()">
+                    View All Complaints
+                </button>
+
+                <div class="action-group">
+                    <input type="number" id="searchId" placeholder="Enter Complaint ID">
+                    <button onclick="searchComplaint()">
+                        Search
+                    </button>
+                </div>
+
+                <div class="action-group">
+                    <input type="number" id="resolveId" placeholder="Enter Complaint ID">
+                    <button onclick="resolveComplaint()">
+                        Resolve
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Output -->
+        <div id="output" class="complaint-grid"></div>
+
+    </div>
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>

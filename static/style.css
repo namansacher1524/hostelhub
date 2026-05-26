@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+}
+
+/* Animated Background */
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at top left, rgba(59,130,246,0.4), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(168,85,247,0.4), transparent 30%);
+    z-index: -1;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #60a5fa, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header p {
+    margin-top: 10px;
+    color: #cbd5e1;
+    font-size: 1.1rem;
+}
+
+/* Layout */
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+}
+
+.glass-card h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* Inputs */
+input,
+textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #cbd5e1;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Buttons */
+button {
+    border: none;
+    padding: 14px 22px;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 600;
+}
+
+.primary-btn {
+    width: 100%;
+    background: linear-gradient(to right, #3b82f6, #8b5cf6);
+    color: white;
+}
+
+.primary-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(139,92,246,0.5);
+}
+
+.secondary-btn {
+    width: 100%;
+    margin-bottom: 20px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Action Groups */
+.action-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.action-group button {
+    background: #3b82f6;
+    color: white;
+    min-width: 120px;
+}
+
+.action-group button:hover {
+    background: #2563eb;
+}
+
+/* Complaint Cards */
+.complaint-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #60a5fa;
+}
+
+.card p {
+    margin-bottom: 10px;
+    color: #e2e8f0;
+}
+
+.status {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.pending {
+    background: rgba(251,191,36,0.2);
+    color: #facc15;
+}
+
+.resolved {
+    background: rgba(34,197,94,0.2);
+    color: #22c55e;
+}
+
+/* Mobile */
+@media(max-width: 900px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+        font-size: 3rem;
+    }
+}
